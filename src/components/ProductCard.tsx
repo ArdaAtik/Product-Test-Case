@@ -1,7 +1,6 @@
 import { Product } from "../pages/Home";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
-import Container from "react-bootstrap/Container";
 import { useShoppingCart } from "../context/shoppingCartContext";
 import Badge from "react-bootstrap/Badge";
 
@@ -39,13 +38,14 @@ const ProductCard = ({
         <div
           style={{
             height: "6rem",
+            marginBottom: "1rem",
           }}
         >
           <Card.Title className="d-flex justify-content-between align-items-baseline ">
             <span className="fs-5">{title}</span>
             <span className="ms-2 text-muted">{price}$</span>
           </Card.Title>
-          <Badge pill bg="dark">
+          <Badge pill bg="dark" className="">
             {category}
           </Badge>
         </div>
